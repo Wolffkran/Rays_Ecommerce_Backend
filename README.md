@@ -64,6 +64,9 @@ To run this project locally, follow these steps:
 
 ## Usage
 
+Video: https://drive.google.com/file/d/1vG8H_1MGnpguJW1C7X5QulHTHhk2DThp/view?usp=sharing
+Github: https://github.com/Wolffkran/Rays_Ecommerce_Backend.git
+
 ### Database Connection
 
 When the server is started, the Sequelize models are synced to the MySQL database using the provided credentials in the `.env` file.
