@@ -91,17 +91,6 @@ When the server is started, the Sequelize models are synced to the MySQL databas
 
 Use a tool like [Insomnia](https://insomnia.rest/) to test API GET, POST, PUT, and DELETE routes for categories, products, and tags.
 
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvement, please open an [issue](https://github.com/your-username/e-commerce-backend/issues) or create a [pull request](https://github.com/your-username/e-commerce-backend/pulls).
-
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-
-## Questions
-
-If you have any questions or need further assistance, feel free to reach out:
-
-- GitHub: [Your GitHub Username](https://github.com/your-username)
-- Email: your.email@example.com
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
