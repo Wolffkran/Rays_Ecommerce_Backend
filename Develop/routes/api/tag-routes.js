@@ -1,11 +1,9 @@
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
-// The `/api/tags` endpoint
-
+// Get all tags
 router.get('/', async (req, res) => {
   try {
-    // find all tags and include their associated Product data and associated ProductTag data
     const tags = await Tag.findAll({
       include: [
         {
@@ -21,9 +19,9 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Get a tag by ID
 router.get('/:id', async (req, res) => {
   try {
-    // find a single tag by its `id` and include its associated Product data and associated ProductTag data
     const tag = await Tag.findByPk(req.params.id, {
       include: [
         {
@@ -45,9 +43,9 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// Create a new tag
 router.post('/', async (req, res) => {
   try {
-    // create a new tag
     const newTag = await Tag.create(req.body);
     res.json(newTag);
   } catch (err) {
@@ -56,20 +54,25 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Update a tag by ID
 router.put('/:id', async (req, res) => {
   try {
-    // update a tag's name by its `id` value
+    const tagId = req.params.id; 
+    console.log(`Updating tag with ID: ${tagId}`);
+
     const updatedTag = await Tag.update(req.body, {
       where: {
-        id: req.params.id,
+        id: tagId,
       },
     });
 
     if (!updatedTag[0]) {
+      console.log(`Tag with ID ${tagId} not found`);
       res.status(404).json({ message: 'Tag not found' });
       return;
     }
 
+    console.log(`Tag with ID ${tagId} updated successfully`);
     res.json({ message: 'Tag updated successfully' });
   } catch (err) {
     console.error(err);
@@ -77,9 +80,9 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// Delete a tag by ID
 router.delete('/:id', async (req, res) => {
   try {
-    // delete one tag by its `id` value
     const deletedTag = await Tag.destroy({
       where: {
         id: req.params.id,
