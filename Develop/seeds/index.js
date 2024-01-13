@@ -6,8 +6,13 @@ const seedProductTags = require('./product-tag-seeds');
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
-  await sequelize.sync({ force: true });
+  
+  await sequelize.query('DROP TABLE IF EXISTS product_tag, tag, product, category;');
+
+  await sequelize.sync();
   console.log('\n----- DATABASE SYNCED -----\n');
+
+  // Seed tables in the desired order
   await seedCategories();
   console.log('\n----- CATEGORIES SEEDED -----\n');
 

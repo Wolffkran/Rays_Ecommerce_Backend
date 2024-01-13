@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connection.js');
 
 class Product extends Model {}
 
@@ -33,9 +33,10 @@ Product.init(
     category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'category', // Assuming your Category model is named 'Category'
+        model: 'category',
         key: 'id',
       },
+      onDelete: 'CASCADE', // enables cascade deletion
     },
   },
   {
