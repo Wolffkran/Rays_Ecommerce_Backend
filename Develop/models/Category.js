@@ -26,7 +26,7 @@ Category.init(
   }
 );
 
-// Add the association with the Product model
+
 Category.hasMany(Product, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE', // enables cascade deletion
