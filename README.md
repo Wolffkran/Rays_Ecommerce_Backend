@@ -9,9 +9,9 @@
 
 ## Description
 
-This project is the back end for an e-commerce website built using Express.js and Sequelize to interact with a MySQL database. The primary goal is to provide a functional API that enables the management of categories, products, and tags for an internet retail company.
+This repository serves as the back end for an e-commerce website, leveraging Express.js and Sequelize to interact with a MySQL database. The project's primary objective is to deliver a robust API facilitating the management of categories, products, and tags for an online retail business.
 
-### Technologies Used
+### Technologies Utilized
 
 - Node.js
 - Express.js
@@ -20,7 +20,7 @@ This project is the back end for an e-commerce website built using Express.js an
 
 ## Installation
 
-To run this project locally, follow these steps:
+To run the project locally, follow these steps:
 
 1. Clone the repository:
 
@@ -42,7 +42,7 @@ To run this project locally, follow these steps:
 
 4. Set up the database:
    
-    - Create a `.env` file in the root of your project and add the following:
+    - Create a `.env` file in the project's root and add the following:
 
       ```env
       DB_NAME=your_database_name
@@ -50,7 +50,7 @@ To run this project locally, follow these steps:
       DB_PASSWORD=your_mysql_password
       ```
 
-    - Run the following commands to set up the database schema and seed data:
+    - Execute the following commands to set up the database schema and seed data:
 
       ```bash
       npm run db:setup
@@ -64,12 +64,12 @@ To run this project locally, follow these steps:
 
 ## Usage
 
-Video: https://drive.google.com/file/d/1vG8H_1MGnpguJW1C7X5QulHTHhk2DThp/view?usp=sharing
-Github: https://github.com/Wolffkran/Rays_Ecommerce_Backend.git
+[Video Demo](https://drive.google.com/file/d/1vG8H_1MGnpguJW1C7X5QulHTHhk2DThp/view?usp=sharing)
+[GitHub Repository](https://github.com/Wolffkran/Rays_Ecommerce_Backend.git)
 
 ### Database Connection
 
-When the server is started, the Sequelize models are synced to the MySQL database using the provided credentials in the `.env` file.
+Upon starting the server, Sequelize models are synchronized with the MySQL database using the credentials provided in the `.env` file.
 
 ### API Routes
 
@@ -90,7 +90,7 @@ When the server is started, the Sequelize models are synced to the MySQL databas
 
 ### Testing
 
-Use a tool like [Insomnia](https://insomnia.rest/) to test API GET, POST, PUT, and DELETE routes for categories, products, and tags.
+Utilize tools like [Insomnia](https://insomnia.rest/) to test API GET, POST, PUT, and DELETE routes for categories, products, and tags.
 
 ## License
 
