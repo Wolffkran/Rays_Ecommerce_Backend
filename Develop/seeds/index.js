@@ -12,7 +12,7 @@ const seedAll = async () => {
   await sequelize.sync();
   console.log('\n----- DATABASE SYNCED -----\n');
 
-  // Seed tables in the desired order
+  // Seed tables in the desired procedure
   await seedCategories();
   console.log('\n----- CATEGORIES SEEDED -----\n');
 
