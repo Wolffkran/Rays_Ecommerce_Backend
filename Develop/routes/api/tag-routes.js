@@ -93,11 +93,11 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!deletedTag) {
-      res.status(404).json({ message: 'Tag not found' });
+      res.status(404).json({ message: 'Tag not located' });
       return;
     }
 
-    res.json({ message: 'Tag deleted successfully' });
+    res.json({ message: 'Tag destroyed successfully' });
   } catch (err) {
     console.error(err);
     res.status(500).json(err);

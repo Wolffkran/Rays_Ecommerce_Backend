@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
     });
 
     if (!product) {
-      res.status(404).json({ message: 'Product not found' });
+      res.status(404).json({ message: 'Product not located' });
       return;
     }
     res.json(product);
@@ -80,7 +80,7 @@ router.put('/:id', async (req, res) => {
         ProductTag.bulkCreate(newProductTags),
       ]);
     }
-    res.json({ message: 'Product updated successfully' });
+    res.json({ message: 'Product successfully updated' });
   } catch (err) {
     console.error(err);
     res.status(400).json(err);
@@ -94,10 +94,10 @@ router.delete('/:id', async (req, res) => {
       where: { id: req.params.id },
     });
     if (!deletedProduct) {
-      res.status(404).json({ message: 'Product not found' });
+      res.status(404).json({ message: 'Product not located' });
       return;
     }
-    res.json({ message: 'Product deleted successfully' });
+    res.json({ message: 'Product destroyed successfully' });
   } catch (err) {
     console.error(err);
     res.status(500).json(err);
